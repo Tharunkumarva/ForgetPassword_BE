@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const status = '<%- JSON.stringify(status)%>';
+            if(JSON.parse(status) == "verified"){
+                if (confirm("Do you want to login?")){
+                    window.location.href="http://localhost:3000/"
+                }
+
+            }
+        
+      
+    </script>
+</head>
+<body>
+    <h1><%= email%></h1>
+    <form action="" method="post">
+        <input type="password" name="password" id="password" placeholder="NewPassword" /><br />
+        <input type="password" name="Conform password" id="Conform password" placeholder="ReEnterNewPassword" /><br />
+        <input type="submit" name="submit" id="password" />
+    </form>
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script>
+        const status = '<%- JSON.stringify(status)%>';
+        if(JSON.parse(status) == "verified"){
+            if (confirm("Do you want to login?")){
+                window.location.href="http://localhost:3000/"
+            }
+        }
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1><%= email%></h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="New Password" required />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Re-enter New Password" required />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
